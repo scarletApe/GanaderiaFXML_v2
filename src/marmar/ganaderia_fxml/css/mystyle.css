@@ -1,0 +1,6 @@
+.label-cabeza {
+    -fx-font-size: 24px;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #81472e;
+    -fx-opacity: 1;
+}

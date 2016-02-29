@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="615.0" prefWidth="1130.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marmar.ganaderia_fxml.gui.RegistrarController">
+   <children>
+      <TabPane fx:id="tabPaneRegistrar" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab fx:id="tabRegBovComp" text="Registrar Bovino">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background">
+                     <children>
+                        <GridPane hgap="5.0" layoutX="19.0" layoutY="44.0" prefHeight="508.0" prefWidth="834.0" vgap="5.0" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="44.0">
+                           <children>
+                              <Label layoutX="42.0" layoutY="276.0" text="Raza:" GridPane.rowIndex="5" />
+                              <TextField fx:id="tfRB_Apodo" layoutX="101.0" layoutY="141.0" maxWidth="674.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label layoutX="22.0" layoutY="101.0" text="ID Arete:" GridPane.rowIndex="1" />
+                              <Label layoutX="42.0" layoutY="238.0" text="Sexo:" GridPane.rowIndex="4" />
+                              <TextField fx:id="tfRB_Color" layoutX="101.0" layoutY="192.0" maxWidth="674.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <DatePicker fx:id="dpRB_FMue" layoutX="112.0" layoutY="393.0" maxWidth="674.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <TextField fx:id="tfRB_Arete" layoutX="101.0" layoutY="96.0" maxWidth="674.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label layoutX="22.0" layoutY="444.0" text="Comentario:" GridPane.rowIndex="9" />
+                              <Label layoutX="28.0" layoutY="398.0" text="Fecha Muerte:" GridPane.rowIndex="8" />
+                              <ComboBox fx:id="cbRB_Melona" layoutX="101.0" layoutY="307.0" maxWidth="674.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextArea fx:id="taRB_Com" layoutX="114.0" layoutY="444.0" prefHeight="69.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                              <DatePicker fx:id="dpRB_FNac" layoutX="112.0" layoutY="354.0" maxWidth="674.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <Label layoutX="12.0" layoutY="359.0" text="Fecha Nacimiento:" GridPane.rowIndex="7" />
+                              <Label layoutX="32.0" layoutY="312.0" text="Melona:" GridPane.rowIndex="6" />
+                              <Label layoutX="42.0" layoutY="197.0" text="Color:" GridPane.rowIndex="3" />
+                              <TextField fx:id="tfRB_ID" disable="true" editable="false" layoutX="101.0" layoutY="60.0" maxWidth="674.0" GridPane.columnIndex="1" />
+                              <Label layoutX="59.0" layoutY="65.0" text="ID:" />
+                              <ComboBox fx:id="cbRB_Sexo" layoutX="101.0" layoutY="233.0" maxWidth="674.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="cbRB_Raza" layoutX="101.0" layoutY="271.0" maxWidth="674.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label layoutX="37.0" layoutY="146.0" text="Apodo:" GridPane.rowIndex="2" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <HBox layoutX="711.0" layoutY="566.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                           <children>
+                              <Button layoutX="714.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegBovinoLimpiar" styleClass="btn" text="Limpiar" />
+                              <Button fx:id="bRB_Guardar" layoutX="794.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegBovinoGuardar" styleClass="btn" text="Guardar" />
+                           </children>
+                        </HBox>
+                        <Label layoutX="17.0" layoutY="14.0" styleClass="label-cabeza" text="Datos del Bovino:" textFill="#2b579a">
+                           <font>
+                              <Font size="24.0" />
+                           </font></Label>
+                        <Separator layoutY="45.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabRegRaza" text="Registrar Raza">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background">
+                     <children>
+                        <GridPane hgap="10.0" layoutX="13.0" layoutY="48.0" prefHeight="506.0" prefWidth="834.0" vgap="10.0" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="48.0">
+                           <children>
+                              <Label layoutX="86.0" layoutY="239.0" text="Descripción:" GridPane.rowIndex="1" />
+                              <TextArea fx:id="taRegTazaDescri" layoutX="173.0" layoutY="232.0" prefHeight="373.0" prefWidth="554.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="tfRegRazaNombre" layoutX="173.0" layoutY="171.0" GridPane.columnIndex="1" />
+                              <Label layoutX="50.0" layoutY="176.0" text="Nombre de Raza:" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="110.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="423.0" />
+                           </columnConstraints>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <HBox layoutX="705.0" layoutY="566.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="20.0">
+                           <children>
+                              <Button fx:id="bRegRazaLimpiar" layoutX="710.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegRazaLimpiar" styleClass="btn" text="Limpiar" />
+                              <Button fx:id="bRegRazaGuardar" layoutX="788.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegRazaGuardar" styleClass="btn" text="Guardar" />
+                           </children>
+                        </HBox>
+                        <Label layoutX="18.0" layoutY="14.0" styleClass="label-cabeza" text="Datos de la Raza:" textFill="#2b579a">
+                           <font>
+                              <Font size="24.0" />
+                           </font></Label>
+                        <Separator layoutY="43.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Registrar Venta">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <SplitPane dividerPositions="0.2793388429752066" orientation="VERTICAL" VBox.vgrow="ALWAYS">
+                           <items>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="background">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" styleClass="label-cabeza" text="Datos de la Venta:" textFill="#2b579a">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font></Label>
+                                    <GridPane hgap="10.0" layoutX="14.0" layoutY="59.0" prefHeight="130.0" prefWidth="838.0" vgap="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="59.0">
+                                       <children>
+                                          <TextField fx:id="tfRegVenComprador" layoutX="127.0" layoutY="93.0" maxWidth="750.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Label layoutX="19.0" layoutY="141.0" text="Fecha de Venta:" GridPane.rowIndex="2" />
+                                          <Label layoutX="14.0" layoutY="54.0" text="Monto:" />
+                                          <TextField fx:id="tfRegVenMonto" layoutX="127.0" layoutY="49.0" maxWidth="750.0" GridPane.columnIndex="1" />
+                                          <Label layoutX="14.0" layoutY="98.0" text="Comprador:" GridPane.rowIndex="1" />
+                                          <DatePicker fx:id="dpRegVenFecha" layoutX="127.0" layoutY="136.0" maxWidth="750.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <Separator layoutY="43.0" prefHeight="3.0" prefWidth="862.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="background">
+                                 <children>
+                                    <GridPane hgap="10.0" layoutX="14.0" layoutY="14.0" prefHeight="366.0" prefWidth="836.0" vgap="10.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                       <children>
+                                          <Label layoutX="14.0" layoutY="14.0" text="Bovinos Disponibles:" />
+                                          <ListView fx:id="listRegVenRight" layoutX="477.0" layoutY="31.0" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="31.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                          <Label layoutX="477.0" layoutY="14.0" text="Bovinos Por Vender:" GridPane.columnIndex="2" />
+                                          <ListView fx:id="listRegVenDisp" layoutX="14.0" layoutY="31.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="31.0" GridPane.rowIndex="1" />
+                                          <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <children>
+                                                <Button mnemonicParsing="false" onAction="#handleButtonRegVenAnadir" prefWidth="130.0" styleClass="btn" text="Añadir -&gt;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <Button mnemonicParsing="false" onAction="#handleButtonRegVenRemover" prefWidth="130.0" styleClass="btn" text="&lt;- Remover" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                    <HBox alignment="CENTER_RIGHT" layoutX="709.0" layoutY="350.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#handleButtonRegVenLimpiar" styleClass="btn" text="Limpiar" />
+                                          <Button mnemonicParsing="false" onAction="#handleButtonRegVenGuardar" styleClass="btn" text="Guardar" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </items>
+                        </SplitPane>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            <Tab fx:id="tabRegVacuna" text="Registrar Vacunación">
+               <content>
+                  <SplitPane dividerPositions="0.34761120263591433" orientation="VERTICAL">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="background">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" styleClass="label-cabeza" text="Datos de la Vacunación:" textFill="#2b579a">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font></Label>
+                              <Separator layoutX="7.0" layoutY="38.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0" />
+                              <GridPane hgap="10.0" layoutX="14.0" layoutY="47.0" prefHeight="147.0" prefWidth="842.0" vgap="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="54.0">
+                                 <children>
+                                    <TextField fx:id="tfRegVacunaVeterinario" layoutX="109.0" layoutY="77.0" maxWidth="750.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label layoutX="14.0" layoutY="150.0" text="Fecha:" GridPane.rowIndex="3" />
+                                    <DatePicker fx:id="dpRegVacunaFecha" layoutX="109.0" layoutY="145.0" maxWidth="750.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label layoutX="14.0" layoutY="115.0" text="Comentario:" GridPane.rowIndex="2" />
+                                    <TextField fx:id="tfRegVacunaComentario" layoutX="109.0" layoutY="110.0" maxWidth="750.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label layoutX="14.0" layoutY="52.0" text="Vacuna:" />
+                                    <Label layoutX="14.0" layoutY="82.0" text="Veterinario:" GridPane.rowIndex="1" />
+                                    <TextField fx:id="tfRegVacuna" layoutX="109.0" layoutY="47.0" maxWidth="750.0" GridPane.columnIndex="1" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" styleClass="background">
+                           <children>
+                              <GridPane hgap="10.0" prefHeight="340.0" prefWidth="856.0" vgap="10.0" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Bovinos Disponibles:" />
+                                    <ListView fx:id="listRegVacunaRight" layoutX="477.0" layoutY="31.0" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="31.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Label layoutX="477.0" layoutY="14.0" text="Bovinos Por Vacunar:" GridPane.columnIndex="2" />
+                                    <ListView fx:id="listRegVacunaDisp" layoutX="14.0" layoutY="31.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="31.0" GridPane.rowIndex="1" />
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#handleButtonRegVacunaAnadir" prefWidth="130.0" styleClass="btn" text="Añadir -&gt;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <Button mnemonicParsing="false" onAction="#handleButtonRegVacunaRemover" prefWidth="130.0" styleClass="btn" text="&lt;- Remover" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                       </children>
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                    </GridPane>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <HBox layoutX="711.0" layoutY="351.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                                 <children>
+                                    <Button layoutX="722.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleButtonRegVacunaLimpiar" styleClass="btn" text="Limpiar" />
+                                    <Button fx:id="bRegVacunaGuardar" layoutX="794.0" layoutY="351.0" mnemonicParsing="false" onAction="#handleButtonRegVacunaGuardar" styleClass="btn" text="Guardar" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+            <Tab text="Registrar Nacimientos">
+               <content>
+                  <SplitPane dividerPositions="0.4855824682814302" prefHeight="160.0" prefWidth="200.0">
+                     <items>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
+                           <children>
+                              <Label layoutX="14.0" layoutY="26.0" styleClass="label-cabeza" text="Datos de la Cria:" textFill="#2b579a">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font></Label>
+                              <GridPane alignment="CENTER" hgap="10.0" layoutX="14.0" layoutY="58.0" prefHeight="481.0" prefWidth="387.0" vgap="10.0" AnchorPane.bottomAnchor="68.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="58.0">
+                                 <children>
+                                    <TextField fx:id="tfRegNacColor" layoutX="73.0" layoutY="88.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                                    <DatePicker fx:id="dpRegNacFN" layoutX="143.0" layoutY="277.0" maxWidth="372.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label layoutX="16.0" layoutY="273.0" text="Fecha Nacimeinto:" GridPane.rowIndex="3" />
+                                    <ComboBox fx:id="cbRegNacSexo" layoutX="73.0" layoutY="142.0" maxWidth="372.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label layoutX="14.0" layoutY="147.0" text="Sexo:" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="cbRegNacRaza" layoutX="73.0" layoutY="215.0" maxWidth="372.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label layoutX="14.0" layoutY="93.0" text="Color:" />
+                                    <Label layoutX="15.0" layoutY="211.0" text="Raza:" GridPane.rowIndex="2" />
+                                    <TextArea fx:id="taRegNacComentario" layoutX="73.0" layoutY="346.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label layoutX="15.0" layoutY="346.0" text="Comentario:" GridPane.rowIndex="4" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                 </columnConstraints>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                              <Separator layoutX="1.0" layoutY="55.0" prefHeight="0.0" prefWidth="419.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="0.0" />
+                              <HBox layoutX="275.0" layoutY="566.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                                 <children>
+                                    <Button fx:id="bRegNacLimpiar" layoutX="274.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegNacLimpiar" styleClass="btn" text="Limpiar" />
+                                    <Button fx:id="bRegNacAnadir" layoutX="344.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegNacAnadir" styleClass="btn" text="Añadir" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </HBox>
+                              <Button fx:id="bRegNacActualizar" layoutX="14.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegNacActualizar" styleClass="btn" text="Actualizar" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" styleClass="background">
+                           <children>
+                              <Label layoutX="14.0" layoutY="25.0" styleClass="label-cabeza" text="Por Registrar:" textFill="#2b579a">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font></Label>
+                              <Separator layoutY="54.0" prefHeight="4.0" prefWidth="438.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <ListView fx:id="listRegNac" layoutX="14.0" layoutY="78.0" prefHeight="453.0" prefWidth="414.0" AnchorPane.bottomAnchor="76.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="78.0" />
+                              <HBox layoutX="276.0" layoutY="566.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                                 <children>
+                                    <Button fx:id="bRegNacLimpiar2" layoutX="298.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegNacLimpiar2" styleClass="btn" text="Limpiar" />
+                                    <Button fx:id="bRegNacGuardar" layoutX="369.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegNacGuardar" styleClass="btn" text="Guardar" />
+                                 </children>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+            <Tab text="Registrar Muertes">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background">
+                     <children>
+                        <GridPane hgap="10.0" layoutX="10.0" layoutY="44.0" prefHeight="506.0" prefWidth="841.0" vgap="10.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="44.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Bovinos Disponibles:" />
+                              <ListView fx:id="listRegMtRight" layoutX="477.0" layoutY="31.0" AnchorPane.bottomAnchor="60.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="31.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label layoutX="477.0" layoutY="14.0" text="Fallecidos:" GridPane.columnIndex="2" />
+                              <ListView fx:id="listRegMtDisp" layoutX="14.0" layoutY="31.0" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="31.0" GridPane.rowIndex="1" />
+                              <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button fx:id="bRegMtAnadir" mnemonicParsing="false" onAction="#handleButtonRegMTAnadir" prefWidth="130.0" styleClass="btn" text="Añadir -&gt;" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                    <Button fx:id="bRegMtRemover" mnemonicParsing="false" onAction="#handleButtonRegMTRemover" prefWidth="130.0" styleClass="btn" text="&lt;- Remover" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="130.0" minWidth="10.0" prefWidth="130.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                        <HBox layoutX="710.0" layoutY="566.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="15.0">
+                           <children>
+                              <Button fx:id="bRegMtLimpiar" layoutX="721.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegMTLimpiar" styleClass="btn" text="Limpiar" />
+                              <Button fx:id="bRegMtGuardar" layoutX="793.0" layoutY="566.0" mnemonicParsing="false" onAction="#handleButtonRegMTGuardar" styleClass="btn" text="Guardar" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="16.0" layoutY="566.0" prefHeight="27.0" prefWidth="669.0" spacing="10.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="182.0">
+                           <children>
+                              <Label layoutX="16.0" layoutY="523.0" text="Registrar para la Fecha:" />
+                              <DatePicker fx:id="dpRegMtFecha" layoutX="162.0" layoutY="518.0" prefWidth="400.0" />
+                           </children>
+                        </HBox>
+                        <Label layoutX="16.0" layoutY="14.0" styleClass="label-cabeza" text="Seleccionar los Bovinos Fallecidos:" textFill="#2b579a">
+                           <font>
+                              <Font size="24.0" />
+                           </font></Label>
+                        <Separator layoutY="44.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="43.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
